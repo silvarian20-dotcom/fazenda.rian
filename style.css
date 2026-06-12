@@ -1,0 +1,164 @@
+:root {
+    --green-pr: #008751;
+    --blue-pr: #0051a2;
+    --white: #ffffff;
+    --land: #8B5A2B;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: linear-gradient(135deg, var(--green-pr), var(--blue-pr));
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.flag-mini {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 50px;
+    border: 1px solid white;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-weight: bold;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        grid-template-columns: 1fr;
+    }
+    #dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#farm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #d7ccc8;
+    padding: 15px;
+    border-radius: 12px;
+    border: 4px solid var(--land);
+}
+
+.plot {
+    background-color: var(--land);
+    aspect-ratio: 1;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    position: relative;
+    transition: transform 0.2s;
+    color: white;
+}
+
+.plot:hover {
+    transform: scale(1.05);
+}
+
+.plot .status-text {
+    font-size: 12px;
+    background: rgba(0,0,0,0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+#shop {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.shop-item {
+    background: #f1f8e9;
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    background-color: var(--green-pr);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #00643c;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#news-ticker {
+    width: 100%;
+    max-width: 800px;
+    background: #fff9c4;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #fff59d;
+}

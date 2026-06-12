@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda Sustentável Paraná - O Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <svg class="flag-mini" viewBox="0 0 300 210">
+            <rect width="300" height="210" fill="#ffffff"/>
+            <path d="M 0 0 L 300 210 L 0 210 Z" fill="#008751"/>
+            <path d="M 300 0 L 300 210 L 0 0 Z" fill="#008751"/>
+            <circle cx="150" cy="105" r="45" fill="#0051a2"/>
+            <path d="M 105 105 A 45 45 0 0 1 195 105" fill="none" stroke="#ffffff" stroke-width="4"/>
+        </svg>
+        <h1>Fazenda Sustentável "Terra Viva"</h1>
+        <p>Gerencie sua eco-fazenda no Paraná!</p>
+    </header>
+
+    <div id="dashboard">
+        <div class="stat-card" style="border-bottom: 4px solid gold;">Moedas Eco 🪙<span id="coins">100</span></div>
+        <div class="stat-card" style="border-bottom: 4px solid #4caf50;">Sustentabilidade 🌱<span id="sust">50%</span></div>
+        <div class="stat-card" style="border-bottom: 4px solid #2196f3;">Água Disponível 💧<span id="water">100%</span></div>
+        <div class="stat-card" style="border-bottom: 4px solid #ff9800;">Energia Solar ☀️<span id="energy">0 kW</span></div>
+    </div>
+
+    <div id="news-ticker">📢 Bem-vindo! Clique na terra arada para plantar Alface.</div>
+
+    <div id="game-container">
+        <div id="farm-grid">
+            <div class="plot" onclick="interactPlot(0)" id="plot-0">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(1)" id="plot-1">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(2)" id="plot-2">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(3)" id="plot-3">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(4)" id="plot-4">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(5)" id="plot-5">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(6)" id="plot-6">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(7)" id="plot-7">🟫<span class="status-text">Vazio</span></div>
+            <div class="plot" onclick="interactPlot(8)" id="plot-8">🟫<span class="status-text">Vazio</span></div>
+        </div>
+
+        <div id="shop">
+            <h3>Eco-Upgrades</h3>
+            <div class="shop-item">
+                <span>☀️ Painel Solar</span>
+                <small>Gera moedas passivas e energia limpa.</small>
+                <button id="btn-solar" onclick="buyUpgrade('solar', 50)">Comprar (50 🪙)</button>
+            </div>
+            <div class="shop-item">
+                <span>🌧️ Cisterna de Chuva</span>
+                <small>Recupera água mais rápido.</small>
+                <button id="btn-cisterna" onclick="buyUpgrade('cisterna', 80)">Comprar (80 🪙)</button>
+            </div>
+            <div class="shop-item">
+                <span>🪱 Compostagem</span>
+                <small>Aumenta o bônus de sustentabilidade.</small>
+                <button id="btn-compost" onclick="buyUpgrade('compost', 100)">Comprar (100 🪙)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
